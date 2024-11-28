@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de ferramentas</title>
+  <link rel="stylesheet" href="./src/style/index.css">
+</head>
+<body>
+  <h1>Adicionar Produtos</h1>
+
+  <form action="./src/php/index.php" id="form-produtos" method="POST">
+    <div id="produtos">
+      <div class="produto">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome[]" id="nome">
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" name="quantidade[]" id="quantidade">
+
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco[]" id="preco" step="0.01">
+      </div>
+    </div>
+
+    <input type="hidden" name="produtos" id="produtos-json">
+
+    <button class="adicionar-produto" type="button">Adicionar produto</button>
+    
+    <button type="submit">Calcular</button>
+  </form>
+
+  <h2>Produtos Adicionados:</h2>
+  <table id="tabela-produtos">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Os produtos adicionados dinamicamente aparecerão aqui -->
+    </tbody>
+  </table>
+  <script src="./src/js/index.js"></script>  
+</body>
+</html>
+
