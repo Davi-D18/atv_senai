@@ -1,13 +1,16 @@
 <?php
 // Configurações do banco de dados
 $host = 'localhost';
-$dbname = 'db_usuario';
+$dbname = 'usuarios';
+
 $user = 'root';
 $pass = '';
 
+
 try {
     // Conexão com o banco de dados
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+$pdo = new PDO("mysql:host=$host;port=3300;dbname=$dbname", $user, $pass);
+
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Verifica se os dados foram enviados
@@ -28,7 +31,8 @@ try {
 
         $mensagemSucesso = "<p class='success'>Usuário cadastrado com sucesso!</p>";
 
-        $mensagemRedirecionamento = "<p><a href='./index.html'>Cadastrar outro usuário</a></p>";
+$mensagemRedirecionamento = "<p><a href='../../index.html'>Cadastrar outro usuário</a></p>";
+
     }
 } catch (PDOException $e) {
     if ($e->getCode() == 23000) { // Código de erro para entrada duplicada
