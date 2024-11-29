@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Container dos cards - ajustes para uma exibição mais adequada */
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 20px;  
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;  
+}
+
+/* Estilização dos cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Estilização do conteúdo do card */
+.card h2 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.card .info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.card .info span {
+  display: block;
+  font-weight: 500;
+}
+
+/* Animação de hover nos cards */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .info span {
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  #card-container {
+    grid-template-columns: 1fr;  
+  }
+}
+
+/* Quando o card se torna visível, anima a transição */
+.card.show {
+  opacity: 1;
+  transform: translateY(0%);
+}
