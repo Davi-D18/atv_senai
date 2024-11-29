@@ -16,7 +16,7 @@ body {
   flex-direction: column;
 }
 
-/* Container dos cards - ajustes para uma exibição mais adequada */
+/* Container dos cards */
 #card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
@@ -81,15 +81,15 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Responsividade para dispositivos menores */
+/* Quando o card se torna visível, anima a transição */
+.card.show {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
 @media (max-width: 768px) {
   #card-container {
     grid-template-columns: 1fr;  
   }
 }
 
-/* Quando o card se torna visível, anima a transição */
-.card.show {
-  opacity: 1;
-  transform: translateY(0%);
-}
