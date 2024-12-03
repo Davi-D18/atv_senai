@@ -3,7 +3,7 @@ export const atividades = [
     titulo: "Loja de Ferramentas",
     descricao:
       "Sistema simples para uma loja de ferramentas, que permita calcular o valor total das compras dos clientes",
-    link: "./atvs/loja_ferramentas/index.html",
+    link: "./atvs/loja_ferramentas",
     categoria: "Cálculos com PHP",
     icone: "🛠️",
   },

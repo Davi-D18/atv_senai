@@ -2,10 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 .resultados {
   height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,12 +18,9 @@
 
 table {
   border-collapse: collapse;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin: 20px 10px 20px 10px;
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: #333;
@@ -29,9 +30,10 @@ table {
 }
 
 th, td {
+  border-radius: 6px;
   padding: 10px;
-  text-align: left;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
 .resultado-total {
@@ -46,4 +48,20 @@ th, td {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f0f0f0;
+}
+
+.btn-voltar {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.voltar a:hover {
+  background-color: #005bb8;
 }

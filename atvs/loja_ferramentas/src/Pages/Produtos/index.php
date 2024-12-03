@@ -1,15 +1,15 @@
 <?php
-  if (isset($_POST['produtos'])) {
+if (isset($_POST['produtos'])) {
     // Recupera os dados enviados
-    $produtos = json_decode($_POST['produtos'], true);  // Decodifica o JSON
+    $produtos = json_decode($_POST['produtos'], true); // Decodifica o JSON
     $totalGeral = 0;
-    
+
     foreach ($produtos as $produto) {
-      // Calcula o total para cada produto
-      $total = (int)$produto['quantidade'] * (float)$produto['preco'];
-      $totalGeral += $total;
+        // Calcula o total para cada produto
+        $total = (int) $produto['quantidade'] * (float) $produto['preco'];
+        $totalGeral += $total;
     }
-  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultados</title>
-  <link rel="stylesheet" href="./php.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/php.css">
 </head>
 <body>
   <section class="resultados">
@@ -41,14 +46,19 @@
             <td>R$ <?=$produto['preco']?></td>
             <td>R$ <?=$produto['total']?></td>
           </tr>
-        <?php endforeach; ?>
-      <?php endif; ?>
+        <?php endforeach;?>
+      <?php endif;?>
 
     </table>
 
     <section class="resultado-total">
-      <p><strong>Total Geral: R$ <?=$totalGeral?></strong></p>
+      <p><strong>Total Geral: R$ <?=number_format($totalGeral, 2)?></strong></p>
     </section>
+
+    <div class="voltar">
+      <a class="btn-voltar" href="../../../index.html">Voltar</a>
+    </div>
   </section>
+
 </body>
 </html>
