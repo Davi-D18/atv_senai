@@ -6,10 +6,10 @@ $dbname = 'usuarios';
 $user = 'root';
 $pass = '';
 
-
 try {
     // Conexão com o banco de dados
 $pdo = new PDO("mysql:host=$host;port=3300;dbname=$dbname", $user, $pass);
+
 
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -31,7 +31,8 @@ $pdo = new PDO("mysql:host=$host;port=3300;dbname=$dbname", $user, $pass);
 
         $mensagemSucesso = "<p class='success'>Usuário cadastrado com sucesso!</p>";
 
-$mensagemRedirecionamento = "<p><a href='../../index.html'>Cadastrar outro usuário</a></p>";
+$mensagemRedirecionamento = "<p class='voltar'><a href='../../index.html'>Cadastrar outro usuário</a></p>";
+
 
     }
 } catch (PDOException $e) {
