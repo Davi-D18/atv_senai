@@ -52,7 +52,7 @@ $mensagemRedirecionamento = "<p class='voltar'><a href='../../index.html'>Cadast
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado do Cadastro</title>
-    <link rel="stylesheet" href="./php.css">
+    <link rel="stylesheet" href="./php.css?v=<?= time() ?>">
 </head>
 <body>
     <div class="loader"></div>
