@@ -14,4 +14,12 @@ export const atividades = [
     categoria: "Banco de Dados",
     icone: "👤",
   },
+  {
+    titulo: "Prova Prática",
+    descricao:
+      "Um sistema para cadastramento de usuários no Banco de Dados, tema da prova prática.",
+    link: "./atvs/prova_pratica",
+    categoria: "Banco de Dados",
+    icone: "📝",
+  },
 ];
