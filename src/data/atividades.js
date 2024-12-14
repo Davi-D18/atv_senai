@@ -22,4 +22,12 @@ export const atividades = [
     categoria: "Banco de Dados",
     icone: "📝",
   },
+  {
+    titulo: "APi Cadastro de Usuários",
+    descricao:
+      "Uma API simples para cadastro de usuários no Banco de Dados com operações básicas de CRUD.",
+    link: "./atvs/api_cadastro",
+    categoria: "Banco de Dados",
+    icone: "👤",
+  },
 ];
