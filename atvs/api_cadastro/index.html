@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Usuário</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="./index.html">Criar Usuário</a></li>
+      <li><a href="./src/pages/Consultar/consultar.html">Consultar Usuário</a></li>
+      <li><a href="./src/pages/Excluir/excluir.html">Excluir Usuário</a></li>
+      <li><a href="./src/pages/Atualizar/atualizar.html">Atualizar Usuário</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form id="createUserForm">
+      <h1>Criar Usuário</h1>
+      <input type="text" id="createName" placeholder="Nome" required>
+      <input type="email" id="createEmail" placeholder="Email" required>
+      <input type="number" id="createAge" placeholder="Idade" required>
+      <button type="submit">Criar Usuário</button>
+    </form>
+
+    <div id="result">
+
+    </div>
+    <div class="container-loader"></div>
+  </main>
+
+  <script type="module" src="./src/js/index.js"></script>
+</body>
+
+</html>

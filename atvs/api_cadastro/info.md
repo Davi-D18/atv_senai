@@ -1,0 +1,1 @@
+Sobre os prints, basta apenas preencher o formulário que ele retorna um Json

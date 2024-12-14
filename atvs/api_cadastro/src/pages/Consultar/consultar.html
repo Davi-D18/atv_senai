@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Usuário</title>
+    <link rel="stylesheet" href="../../styles/index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../../../index.html">Criar Usuário</a></li>
+          <li><a href="./consultar.html">Consultar Usuário</a></li>
+          <li><a href="../Excluir/excluir.html">Excluir Usuário</a></li>
+          <li><a href="../Atualizar/atualizar.html">Atualizar Usuário</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="getUserForm">
+            <h1>Consultar Usuário</h1>
+            <input type="number" id="getUserId" placeholder="ID do Usuário" required>
+            <button type="submit">Consultar Usuário</button>
+        </form>
+
+        <div id="result"></div>
+        <div class="container-loader"></div>
+    </main>
+
+    <script type="module" src="./js/consultar.js"></script>
+</body>
+</html>

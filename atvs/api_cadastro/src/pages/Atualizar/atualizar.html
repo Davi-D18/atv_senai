@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Usuário</title>
+    <link rel="stylesheet" href="../../styles/index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../../../index.html">Criar Usuário</a></li>
+          <li><a href="../Consultar/consultar.html">Consultar Usuário</a></li>
+          <li><a href="../Excluir/excluir.html">Excluir Usuário</a></li>
+          <li><a href="./atualizar.html">Atualizar Usuário</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="updateUserForm">
+            <h1>Atualizar Usuário</h1>
+            <input type="number" id="updateUserId" placeholder="ID do Usuário" required>
+            <input type="text" id="updateName" placeholder="Novo Nome">
+            <input type="email" id="updateEmail" placeholder="Novo Email">
+            <input type="number" id="updateAge" placeholder="Nova Idade">
+            <button type="submit">Atualizar Usuário</button>
+        </form>
+
+        <div id="result"></div>
+
+        <div class="container-loader"></div>
+    </main>
+
+    <script type="module" src="./js/atualizar.js"></script>
+</body>
+</html>

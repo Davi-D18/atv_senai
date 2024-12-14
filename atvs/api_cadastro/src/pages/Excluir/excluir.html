@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Usuário</title>
+    <link rel="stylesheet" href="../../styles/index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="../../../index.html">Criar Usuário</a></li>
+          <li><a href="../Consultar/consultar.html">Consultar Usuário</a></li>
+          <li><a href="./excluir.html">Excluir Usuário</a></li>
+          <li><a href="../Atualizar/atualizar.html">Atualizar Usuário</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="deleteUserForm">
+            <h1>Excluir Usuário</h1>
+            <input type="number" id="deleteUserId" placeholder="ID do Usuário" required>
+            <button type="submit">Excluir Usuário</button>
+        </form>
+
+        <div id="result"></div>
+
+        <div class="container-loader"></div>
+    </main>
+
+    <script type="module" src="./js/excluir.js"></script>
+</body>
+</html>
